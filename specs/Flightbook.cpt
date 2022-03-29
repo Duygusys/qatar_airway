@@ -1,0 +1,76 @@
+Created by testinium on 25.03.2022
+
+This is a concept file with following syntax for each concept.
+# Switch to booking tab
+* wait until visible "com.m.qr:id/skip_button"
+* click "com.m.qr:id/skip_button"
+* wait until visible "com.m.qr:id/onboarding_skip_button"
+* click "com.m.qr:id/onboarding_skip_button"
+* wait until visible "com.m.qr:id/push_consent_allow"
+* click "com.m.qr:id/push_consent_allow"
+* wait until visible "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
+* "com.android.permissioncontroller:id/permission_allow_foreground_only_button" li element varsa tıkla
+* wait until visible "com.m.qr:id/nav_menu_book"
+* click "com.m.qr:id/nav_menu_book"
+
+# Choose one-way flight
+* wait until visible xpath "//android.widget.LinearLayout[@content-desc='One-way']"
+* click element"//android.widget.LinearLayout[@content-desc='One-way']"
+
+# Select departure city and select destination city
+* wait until visible "com.m.qr:id/rvmp_fragment_rtow_flight_selection_origin_holder"
+* click "com.m.qr:id/rvmp_fragment_rtow_flight_selection_origin_holder"
+* wait until visible "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"
+* "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"'li elemente "Milan" key gonder
+* click element"//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.LinearLayout"
+* wait until visible "com.m.qr:id/booking_activity_conversational_message"
+* click "com.m.qr:id/rvmp_fragment_rtow_flight_selection_destination_holder"
+* wait until visible "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"
+* "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"'li elemente "Paris" key gonder
+* click element"//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.LinearLayout"
+* wait until visible "com.m.qr:id/booking_activity_conversational_message"
+
+# Select random departure time
+* click "com.m.qr:id/rvmp_fragment_rtow_flight_selection_departure_date_holder"
+* scroll element
+* "//android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.TextView"click one of the random elements named
+* click "com.m.qr:id/fragment_calendar_confirm_button"
+* wait until visible "com.m.qr:id/rvmp_booking_search_flights_button"
+
+# Click search flight and select flight experience,continue as a guest
+* click "com.m.qr:id/rvmp_booking_search_flights_button" 
+* wait until visible "com.m.qr:id/rvmp_serach_result_travel_requirements_text"
+* click element"//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]"
+* "SAĞ" yönüne swipe et
+* click "com.m.qr:id/rvmp_activity_flight_details_select_button"
+
+# Go to passenger details section
+* wait until visible "com.m.qr:id/button_guest"
+* click "com.m.qr:id/button_guest" 
+* wait until visible "com.m.qr:id/check_text" 
+* click element"//android.widget.LinearLayout[3]/android.widget.LinearLayout/android.widget.LinearLayout/android.widget.LinearLayout" 
+* wait until visible "com.m.qr:id/apis_flyer_tittle"
+
+# Choose title,enter firstname and lastname,select gender,choose date of birth,select nationality 
+* click "com.m.qr:id/apis_flyer_tittle" 
+* click element"//android.widget.ListView/android.widget.TextView[1]" 
+* wait until visible "com.m.qr:id/done_button"
+* send "//android.widget.LinearLayout[1]/android.widget.LinearLayout/android.widget.EditText" key to "John" element
+* send "//android.widget.LinearLayout[2]/android.widget.LinearLayout/android.widget.EditText" key to "Doe" element
+* click "com.m.qr:id/apis_gender"
+* click element"//android.widget.ListView/android.widget.TextView[1]"
+* click "com.m.qr:id/apis_date_of_birth"
+* find and clear "//android.widget.NumberPicker[3]/android.widget.EditText"ed element
+* send "//android.widget.NumberPicker[3]/android.widget.EditText" key to "1997" element
+* click element"//android.widget.NumberPicker[3]/android.widget.EditText"
+* click "android:id/button1"
+* click "com.m.qr:id/apis_nationality"
+* wait until visible "com.m.qr:id/listSearchText"
+* "com.m.qr:id/listSearchText"'li elemente "Turkey" key gonder
+* click "com.m.qr:id/listItemTextView"
+
+# Completed ticket book,click done and continue
+* click "com.m.qr:id/done_button"
+* click "com.m.qr:id/terms_check_box"
+* click "com.m.qr:id/button_continue"
+
