@@ -44,7 +44,7 @@ public class StepImplementation extends HookImplementation{
         WebDriverWait wait = new WebDriverWait(appiumDriver,20);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(id)));
     }
-    @Step("<id>'li elemente <deger> key gonder")
+    @Step("to <id>ed element <deger> send key")
     public void sendKeys(String id,String deger){
         appiumDriver.findElement(By.id(id)).sendKeys(deger);
         logger.info("sended"+deger);
@@ -53,6 +53,7 @@ public class StepImplementation extends HookImplementation{
     public void sendKeysXpath(String id,String deger){
 
         appiumDriver.findElement(By.xpath(id)).sendKeys(deger);
+        logger.info(deger+"gonderildi");
     }
     @Step("<id>click one of the random elements named")
     public void clickRandomByname(String id) {
@@ -60,6 +61,7 @@ public class StepImplementation extends HookImplementation{
         Random rand = new Random();
         int randomNumber = rand.nextInt(elements.size());
         elements.get(randomNumber).click();
+
     }
     @Step("scroll element")
     public void scroll(){
@@ -71,16 +73,17 @@ public class StepImplementation extends HookImplementation{
         action.moveTo(point(500,endPoint));
         action.release();
         action.perform();
+        logger.info("scroll down");
     }
 
-    @Step("<yon> yönüne swipe et")
-    public void swipe(String yon) {
+    @Step("<direct> swipe in your direction")
+    public void swipe(String direct) {
 
         Dimension d = appiumDriver.manage().window().getSize();
         int height = d.height;
         int width = d.width;
 
-        if (yon.equals("SAĞ")) {
+        if (direct.equals("RIGHT")) {
 
             int swipeStartWidth = (width * 80) / 100;
             int swipeEndWidth = (width * 30) / 100;
@@ -95,7 +98,7 @@ public class StepImplementation extends HookImplementation{
                     .moveTo(PointOption.point(swipeEndWidth, swipeEndHeight))
                     .release()
                     .perform();
-        } else if (yon.equals("SOL")) {
+        } else if (direct.equals("LEFT")) {
 
             int swipeStartWidth = (width * 30) / 100;
             int swipeEndWidth = (width * 80) / 100;
@@ -118,8 +121,9 @@ public class StepImplementation extends HookImplementation{
     public void clearTextByKey(String key) {
         MobileElement webElement = appiumDriver.findElement(By.xpath(key));
         webElement.clear();
+        logger.info("clear");
     }
-    @Step("<id> li element varsa tıkla")
+    @Step("if the <id> visible")
     public void tapElementWithKeyControl(String id) {
         MobileElement e1= appiumDriver.findElement(By.id(id));
         try
@@ -133,6 +137,7 @@ public class StepImplementation extends HookImplementation{
             System.out.println("devam et");
         }
        }
+
 }
 
 

@@ -9,7 +9,7 @@ This is a concept file with following syntax for each concept.
 * wait until visible "com.m.qr:id/push_consent_allow"
 * click "com.m.qr:id/push_consent_allow"
 * wait until visible "com.android.permissioncontroller:id/permission_allow_foreground_only_button"
-* "com.android.permissioncontroller:id/permission_allow_foreground_only_button" li element varsa tıkla
+* if the "com.android.permissioncontroller:id/permission_allow_foreground_only_button" visible
 * wait until visible "com.m.qr:id/nav_menu_book"
 * click "com.m.qr:id/nav_menu_book"
 
@@ -21,12 +21,12 @@ This is a concept file with following syntax for each concept.
 * wait until visible "com.m.qr:id/rvmp_fragment_rtow_flight_selection_origin_holder"
 * click "com.m.qr:id/rvmp_fragment_rtow_flight_selection_origin_holder"
 * wait until visible "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"
-* "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"'li elemente "Milan" key gonder
+* to "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"ed element "Milan" send key
 * click element"//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.LinearLayout"
 * wait until visible "com.m.qr:id/booking_activity_conversational_message"
 * click "com.m.qr:id/rvmp_fragment_rtow_flight_selection_destination_holder"
 * wait until visible "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"
-* "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"'li elemente "Paris" key gonder
+* to "com.m.qr:id/rvmp_fragment_ond_selection_filter_edittext"ed element "Paris" send key
 * click element"//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.LinearLayout"
 * wait until visible "com.m.qr:id/booking_activity_conversational_message"
 
@@ -41,7 +41,7 @@ This is a concept file with following syntax for each concept.
 * click "com.m.qr:id/rvmp_booking_search_flights_button" 
 * wait until visible "com.m.qr:id/rvmp_serach_result_travel_requirements_text"
 * click element"//androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]"
-* "SAĞ" yönüne swipe et
+* "RIGHT" swipe in your direction
 * click "com.m.qr:id/rvmp_activity_flight_details_select_button"
 
 # Go to passenger details section
@@ -66,7 +66,7 @@ This is a concept file with following syntax for each concept.
 * click "android:id/button1"
 * click "com.m.qr:id/apis_nationality"
 * wait until visible "com.m.qr:id/listSearchText"
-* "com.m.qr:id/listSearchText"'li elemente "Turkey" key gonder
+* to "com.m.qr:id/listSearchText"ed element "Turkey" send key
 * click "com.m.qr:id/listItemTextView"
 
 # Completed ticket book,click done and continue
